@@ -48,9 +48,9 @@
                 </div>
               </div>
               </li>
+              <li class="nav-link disable"><h5 id="hora">Hora: </h5></li>
             </ul>
-            
-            <form class="d-flex" role="search">
+            <form class="d-flex me-3" role="search">
               <input class="form-control me-2" data-bs-toggle="collapse" data-bs-target="#collapsesbar" aria-expanded="false" aria-controls="collapsesbar" type="search" placeholder="Buscar" aria-label="Search">
               <button class="btn btn-outline-success" type="submit">Buscar</button>
             </form>
@@ -66,7 +66,8 @@
         </div>
       </nav>
 </header>
-<body>
+<body onload="actualizaReloj()">
+    <img id="bgnlgn" src="img/background.jpg" alt="">
     <div class="row">
       <div class="col-1"><br></div>
       <div class="col-10">
@@ -102,47 +103,54 @@
     
 
     <div id="indexcardcont" class="container" style="width: 100%;">
-      <div class="row row-cols-2">
-        <div class="col-12" style="text-align: center;">
-          <h5 style="font-family: fuente1;">Lo mas Vendido</h5>
-        </div>
-        <div class="card" style="width: 11rem; margin-left: 2rem; margin-top: 1rem;">
-          <img src="img/god of war ps4.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text" style="text-align: center;">God of War PS4</p>
+      <div class="d-flex justify-content-center row">
+        <div class="d-flex" style="text-align: center;">
+          <div class="col-lg-4"><br></div>
+          <div class="col-lg-4 cardindex">
+            <h5 style="font-family: fuente1;">Lo mas Vendido</h5>
           </div>
         </div>
-        <div class="card" style="width: 11rem; margin-left: 2rem; margin-top: 1rem;">
+        <a href="juego.html" style="width: 11rem; margin-left: 2rem; margin-top: 1rem; text-decoration: none;">
+          <div class="card cardindex">
+            <img src="img/god of war ps4.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text" style="text-align: center;">God of War PS4</p>
+            </div>
+          </div>
+        </a>
+        <div class="card cardindex" style="width: 11rem; margin-left: 2rem; margin-top: 1rem;">
           <img src="img/god of war ps5.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <p class="card-text" style="text-align: center;">God of War PS5</p>
           </div>
         </div>
-        <div class="card" style="width: 11rem; margin-left: 2rem; margin-top: 1rem;">
-          <img src="img/resident evil ps4.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text" style="text-align: center;">Resident Evil 4 PS4</p>
+        <a href="juego2.html" style="width: 11rem; margin-left: 2rem; margin-top: 1rem; text-decoration: none;"> 
+          <div class="card cardindex">
+            <img src="img/resident evil ps4.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text" style="text-align: center;">Resident Evil 4 PS4</p>
+            </div>
           </div>
-        </div>
-        <div class="card" style="width: 11rem; margin-left: 2rem; margin-top: 1rem;">
+        </a> 
+        <div class="card cardindex" style="width: 11rem; margin-left: 2rem; margin-top: 1rem;">
           <img src="img/resident evil ps5.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <p class="card-text" style="text-align: center;">Resident Evil 4 PS5</p>
           </div>
         </div>
-        <div class="card" style="width: 11rem; margin-left: 2rem; margin-top: 1rem;">
+        <div class="card cardindex" style="width: 11rem; margin-left: 2rem; margin-top: 1rem;">
           <img src="img/Bloodborne.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <p class="card-text" style="text-align: center;">Bloodborne PS4</p>
           </div>
         </div>
-        <div class="card" style="width: 11rem; margin-left: 2rem; margin-top: 1rem;">
+        <div class="card cardindex" style="width: 11rem; margin-left: 2rem; margin-top: 1rem;">
           <img src="img/fifa 23.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <p class="card-text" style="text-align: center;">Fifa 23 PS4</p>
           </div>
         </div>
-        <div class="card" style="width: 11rem; margin-left: 2rem; margin-top: 1rem;">
+        <div class="card cardindex" style="width: 11rem; margin-left: 2rem; margin-top: 1rem;">
           <img src="img/fifa 23 ps5.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <p class="card-text" style="text-align: center;">Fifa 23 PS5</p>
@@ -152,15 +160,32 @@
     </div>
     
     <div id="leftcanv">
-        <div class="offcanvas offcanvas-start" class="navbar bg-dark" data-bs-theme="dark" data-bs-scroll="true" tabindex="-1" id="catoffcanv" aria-labelledby="offcanvasWBOL">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasWBOL">Categorias</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <p>Try scrolling the rest of the page to see this option in action.</p>
-        </div>
-        </div>
+      <div class="offcanvas offcanvas-start" class="navbar bg-dark" data-bs-theme="dark" data-bs-scroll="true" tabindex="-1" id="catoffcanv" aria-labelledby="offcanvasWBOL">
+      <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasWBOL">Categorias</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="card" style="width: 100%;">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="row justify-content-center">
+                  <div class="align-items-center">
+                      <h6>Acción</h6>
+                  </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="row justify-content-center">
+                  <div class="align-items-center">
+                      <h6>Deportes</h6>
+                  </div>
+              </div>
+            </li>
+          </ul>
+          </div>
+      </div>
+      </div>
     </div>
 
     <div id="rightcanv">
@@ -189,5 +214,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/funciones.js"></script>
 </body>
 </html>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Login</title>
+    <title>Registro</title>
 </head>
 <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary" class="navbar bg-dark" data-bs-theme="dark">
@@ -67,23 +67,31 @@
         </div>
     </div>
     <img id="bgnlgn" src="img/background.jpg" alt="">
-    <form id="loginform">
+    <form id="regform">
         <div class="form-group">
             <div id="contlgn" class="align-items-center">
                 <div class="container col-lg-4" style="background: rgba(51,51,51,0.7); padding: 5%; margin-top: 5%;">
                     <div class="colunm g-3 align-items-center">
+                        <div class="col-auto"><label for="inptnombre" class="form-label" style="color: white;">Ingrese Nombre:</label></div>
+                        <div class="col-12"><input name="nombre" type="text" id="inptnombre" placeholder="Nombre" class="form-control"></div>
+                    </div>
+                    <div class="colunm g-3 align-items-center mt-1">
+                        <div class="col-auto"><label for="inptapellido" class="form-label" style="color: white;">Ingrese Apellido:</label></div>
+                        <div class="col-12"><input name="apellido" type="text" id="inptapellido" placeholder="Apellido" class="form-control"></div>
+                    </div>
+                    <div class="colunm g-3 align-items-center mt-1">
                         <div class="col-auto"><label for="inptemail" class="form-label" style="color: white;">Ingrese Email:</label></div>
                         <div class="col-12"><input name="email" type="email" id="inptemail" placeholder="alguien@ejemplo.com" class="form-control"></div>
                     </div>
-                    <div class="colunm g-3 align-items-center mt-4">
+                    <div class="colunm g-3 align-items-center mt-1">
                         <div class="col-auto"><label for="inptpassw" class="form-label" style="color: white;">Ingrese Contraseña</label></div>
                         <div class="col-12"><input name="password" type="password" placeholder="*********" id="inptpassw" class="form-control"></div>
                     </div>
                     <div class="container" style=" padding: 5%; margin-top: 5%;">
                         <div class="d-flex justify-content-center mt-2">
-                            <button class="btn btn-dark" type="submit">Ingresar</button>
+                            <button class="btn btn-dark" type="submit" onclick="userRegister()">Registrarse</button>
                         </div>
-                        <div class="d-flex justify-content-center mt-3"><a href="registro.html" style="color: dodgerblue;">Registrarse</a></div>
+                        <div class="d-flex justify-content-center mt-3"><a href="login.html" style="color: dodgerblue;">Iniciar Sesión</a></div>
                     </div>
                 </div>
             </div>

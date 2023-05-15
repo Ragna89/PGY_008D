@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Resident Evil 4</title>
+</head>
+<header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" class="navbar bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="" width="40px" height="40px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="offcanvas" data-bs-target="#catoffcanv" aria-controls="offcanvasWithBothOptions">Categorias</a>
+              </li>
+              <li class="nav-item">
+                <button type="button" class="nav-link active" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Sobre Nosotros
+                </button>
+              <!-- Modal -->
+              <div class="modal fade" style="color: white;" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Sobre Nosotros</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <h4>Horarios</h4>
+                      <h6>Lunes a Viernes: 10:00 a 19:00</h6>
+                      <h6>Sabado: 12:00 a 18:00</h6>
+                      <br>
+                      <h4>Contacto</h4>
+                      <h6>E-Mail: playstation@gmail.com</h6>
+                      <h6>Fono: +56 9 12341234</h6>
+                      <br>
+                      <h4>La casa del Play</h4>
+                      <h6>Av. Santa Rosa #1500, San Joaquin</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </li>
+              <li class="nav-link disable"><h5 id="hora">Hora: </h5></li>
+            </ul>
+            <form class="d-flex me-3" role="search">
+              <input class="form-control me-2" data-bs-toggle="collapse" data-bs-target="#collapsesbar" aria-expanded="false" aria-controls="collapsesbar" type="search" placeholder="Buscar" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+            <li class="nav-item" id="btnlgn"><a  href="login.html"><button class="btn btn-outline-primary" type="submit">Ingresar</button></a></li>
+            <li class="nav-item" ><button id="btncaco" type="button" class="btn position-center" data-bs-toggle="offcanvas" data-bs-target="#caroffcanv" aria-controls="offcanvasRightWithBothOptions"> <img src="img/car.png" alt="" width="30px" height="30px">
+                <span class="position-center translate-middle badge rounded-pill bg-danger">
+                2
+                <span class="visually-hidden">Productos en el carro</span>
+                </span>
+                </button>
+            </li>
+            </div>
+        </div>
+      </nav>
+</header>
+<body onload="actualizaReloj()">
+    <img id="bgnlgn" src="img/background.jpg" alt="">
+    
+    <div class="row" style="padding: 1%; margin-top: 2%;">
+        <div class="d-flex col-lg-4 justify-content-center" style="height: 100%;">
+            <img src="img/resident evil ps4.jpg" alt="No Imagen" width="400rem" height="600rem">
+        </div>
+        <div class="col-lg-7" style="color: white; height: 100%; padding: 4%; background: rgba(51, 51, 51, 0.8);">
+            <div>
+                <h6>CDO 55590066573</h6>
+                <br>
+                <h5>Capcom</h5>
+                <h2 style="font-family: fuente1;">Resident Evil 4</h2>
+            </div>
+            <div class="col-lg-9"><h6>Género: Acción, Aventura, Terror y Supervivencia, Disparos en tercera persona</h6></div>
+            <br>
+            <div class="col-lg-9">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis voluptate nobis ut itaque, libero hic corrupti, in obcaecati similique cupiditate vel eligendi? Itaque consequuntur dolorem maiores quo inventore quam, repellendus, culpa minima nostrum aliquam beatae totam doloribus non odio reiciendis autem necessitatibus, et a harum sequi hic. Tempore, facere et!</p>
+            </div>
+            <br>
+            <div class="d-flex col-lg justify-content-center"><h2>Precio: $49.990</h2></div>
+            <br>
+            <div class="d-flex col-lg justify-content-center">
+                <button class="btn btn-outline-primary" style="color: white;" type="button" data-bs-target="#prodagresatsmodal" data-bs-toggle="modal"><h4>Agregar al Carro</h4></button></div>
+        </div>
+        <div class="col-lg-1"><br></div>
+    </div>
+    <br>
+    <br>
+    <div class="d-flex row justify-content-center" style="margin-left: 10%; padding: 1%; width: 80%; background: rgba(51, 51, 51, 0.8); color: white; border: solid black;">
+        <div class="d-flex col-lg justify-content-center"><h5>Tambien te puede interesar</h5></div>
+        <div class="container row row-cols-2 justify-content-center">
+            <div class="card" style="background-color: rgba(51, 51, 51, 0.2); color: white; width: 11rem; margin-left: 2rem; margin-top: 1rem;">
+                <img src="img/Bloodborne.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Bloodborne PS4</p>
+                </div>
+            </div>
+            <div class="card" style="background-color: rgba(51, 51, 51, 0.2); color: white; width: 11rem; margin-left: 2rem; margin-top: 1rem;">
+                <img src="img/god of war ps5.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">God of War PS5</p>
+                </div>
+            </div>
+            <a href="juego.html" style="width: 11rem; margin-left: 2rem; margin-top: 1rem; text-decoration: none;">
+                <div class="card"style="background-color: rgba(51, 51, 51, 0.2); color: white;">
+                  <img src="img/god of war ps4.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <p class="card-text" style="text-align: center;">God of War PS4</p>
+                  </div>
+                </div>
+              </a>
+            <div class="card" style="background-color: rgba(51, 51, 51, 0.2); color: white; width: 11rem; margin-left: 2rem; margin-top: 1rem;">
+                <img src="img/resident evil ps5.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Resident Evil PS5</p>
+                </div>
+            </div>
+        </div>
+        <div class="container"><br> <br></div>
+    </div>
+
+    <div class="modal fade" data-bs-theme="dark" style="color: white;" id="prodagresatsmodal" aria-hidden="true" aria-labelledby="prodagresats" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="prodagresatsmodal">Producto Agregado</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Producto ha sido agregado satisfactoriamente al Carro de Compras.
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-outline-primary" data-bs-dismiss="modal">Entendido</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    <div id="leftcanv">
+        <div class="offcanvas offcanvas-start" class="navbar bg-dark" data-bs-theme="dark" data-bs-scroll="true" tabindex="-1" id="catoffcanv" aria-labelledby="offcanvasWBOL">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasWBOL">Categorias</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="card" style="width: 100%;">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <div class="row justify-content-center">
+                    <div class="align-items-center">
+                        <h6>Acción</h6>
+                    </div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="row justify-content-center">
+                    <div class="align-items-center">
+                        <h6>Deportes</h6>
+                    </div>
+                </div>
+              </li>
+            </ul>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/funciones.js"></script>
+</body>
+</html>
