@@ -114,3 +114,68 @@ $(function(){
         }
     })
 })
+
+
+var array_productos = [];
+
+        if (localStorage.getItem('Productos')) {
+            array_productos = JSON.parse(localStorage.getItem('Productos')) || [];
+        }
+
+        function comprar(id) {
+            var producto = $('#producto-' + id);
+
+            var p = {
+                id: id,
+                img: producto.data('img'),
+                nombre: producto.data('nombre'),
+                precio: producto.data('precio')
+            };
+
+            array_productos.push(p);
+
+            localStorage.setItem('Productos', JSON.stringify(array_productos));
+            llenar_carro();
+        }
+
+        function llenar_carro() {
+            $('#carrito-producto').html('');   
+            var texto = '';
+            var total = 0;
+            array_productos.forEach(producto => {
+                texto = texto + `
+                <tr>
+                  <td><img src="${producto.img}" width="50px"></td>
+                  <td>${producto.nombre}</td>
+                  <td>$${producto.precio}</td>
+                </tr>
+                `;
+
+                total += producto.precio;
+            });
+
+            $('#carrito-producto').append(texto);         
+            $('#carrito-precio').html(total);       
+            $('#carrito-precio1').append(total);    
+        }
+
+        function vaciarCarro(){
+            localStorage.removeItem('Productos');
+            alert("Compra enviada Exitosamente")
+            window.location.href = "index.html"
+        }
+
+
+
+function onLoad(){
+    actualizaReloj()
+    llenar_carro()
+}
+
+function refresh() {
+    window.location.href = "juego.html"
+}
+
+function refresh2() {
+    window.location.href = "juego2.html"
+}

@@ -66,7 +66,7 @@
         </div>
       </nav>
 </header>
-<body onload="actualizaReloj()">
+<body onload="onLoad()">
     <img id="bgnlgn" src="img/background.jpg" alt="">
     <div class="row">
       <div class="col-1"><br></div>
@@ -113,7 +113,12 @@
         <a href="juego.html" style="width: 11rem; margin-left: 2rem; margin-top: 1rem; text-decoration: none;">
           <div class="card cardindex">
             <img src="img/god of war ps4.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
+            <div class="card-body"
+                    id="producto-1"
+                    data-img="img/god of war ps4.jpg"
+                    data-nombre="God of War PS4"
+                    data-precio="39990">
+              
               <p class="card-text" style="text-align: center;">God of War PS4</p>
             </div>
           </div>
@@ -127,7 +132,11 @@
         <a href="juego2.html" style="width: 11rem; margin-left: 2rem; margin-top: 1rem; text-decoration: none;"> 
           <div class="card cardindex">
             <img src="img/resident evil ps4.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
+            <div class="card-body"
+                    id="producto-2"
+                    data-img="img/resident evil ps4.jpg"
+                    data-nombre="Resident Evil PS4"
+                    data-precio="49990">
               <p class="card-text" style="text-align: center;">Resident Evil 4 PS4</p>
             </div>
           </div>
@@ -195,17 +204,27 @@
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div id="carcanvbody" class="offcanvas-body" style="background-color: rgba(255, 250, 247, 0.945);">
-                <div class="card" style="width: 100%;">
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">Juego 1</li>
-                      <li class="list-group-item">Juego 2</li>
-                    </ul>
-                  </div>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Imagen</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Precio</th>
+                  </tr>
+                </thead>
+                <tbody id="carrito-producto">
+                  <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <div class="container" style="padding: 3%;"> Total:</div>
+            <div class="container" style="padding: 1%;"> Total: $<span id="carrito-precio1"></span></div>
             <div id="ccbtnc" class="container" style="border: solid rgba(92, 92, 92, 0.178);">
-                <button class="btn btn-light btn-outline-dark" type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" style="margin-right: 10%;">Seguir Comprando</button>
-                <a href="login.html"><button class="btn btn-dark" type="button" >Carro de Compras</button></a>
+                <button class="btn btn-light btn-outline-dark" type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" style="margin-right: 1%;">Seguir Comprando</button>
+                <button class="btn btn-outline-success" type="button" onclick="vaciarCarro()">Enviar compra a wsp $ <span id="carrito-precio1">0</span></button>
             </div>
         </div>
     </div>
